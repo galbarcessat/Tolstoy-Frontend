@@ -13,6 +13,7 @@ export function HomePage() {
         try {
             setIsLoading(true)
             setError(null)
+            setMetadata([])
             const res = await urlService.getMetadata(urls)
             setMetadata(res)
         } catch (err) {
