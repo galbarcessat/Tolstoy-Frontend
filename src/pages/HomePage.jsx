@@ -1,6 +1,11 @@
+import { UrlsForm } from "../cmps/UrlsForm";
+
 export function HomePage() {
 
     return (
-        <div>Home page!</div>
+        <div className="home-page-container">
+            <UrlsForm />
+
+        </div>
     )
 }

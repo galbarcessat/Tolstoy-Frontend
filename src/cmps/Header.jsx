@@ -1,8 +1,9 @@
+import TolstoyLogo from "../assets/imgs/TolstoyLogo.svg"
 
 export function Header() {
-  return (
-    <div>
-        
-    </div>
-  )
+    return (
+        <header className="header-container">
+            <img src={TolstoyLogo} alt="" />
+        </header>
+    )
 }
