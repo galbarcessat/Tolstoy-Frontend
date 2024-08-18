@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button, IconButton } from '@mui/material';
 import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
 
-export function UrlsForm({ onSubmit }) {
+export function UrlsForm({ handleUrlsSubmit }) {
     const [urls, setUrls] = useState(['', '', ''])
 
     function handleUrlChange(index, value) {
@@ -23,15 +23,15 @@ export function UrlsForm({ onSubmit }) {
     function handleSubmit(event) {
         event.preventDefault()
         if (urls.some(url => !url)) {
-            alert('Please fill out all URL fields.')
+            // alert('Please fill out all URL fields.')
         } else {
-            onSubmit(urls)
+            handleUrlsSubmit(urls)
         }
     }
 
     return (
         <div className='form-container'>
-            <h1>Get URLs Metadata :</h1>
+            <h1>Enter URLs to Fetch Metadata : </h1>
             <form onSubmit={handleSubmit}>
 
                 {urls.map((url, index) => {
@@ -61,25 +61,28 @@ export function UrlsForm({ onSubmit }) {
                     )
                 })}
 
-                <Button
-                    variant="contained"
-                    color="primary"
-                    sx={{ textTransform: 'none' }}
-                    endIcon={<AddIcon />}
-                    onClick={handleAddUrl}
+                <div className='btns-container'>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        sx={{ textTransform: 'none' }}
+                        endIcon={<AddIcon />}
+                        onClick={handleAddUrl}
 
-                >
-                    Add Another URL
-                </Button>
+                    >
+                        Add Another URL
+                    </Button>
 
-                <Button
-                    type="submit"
-                    variant="contained"
-                    color="success"
-                    sx={{ textTransform: 'none' }}
-                >
-                    Submit
-                </Button>
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        color="success"
+                        sx={{ textTransform: 'none' }}
+                    >
+                        Submit
+                    </Button>
+                </div>
+
             </form>
         </div>
     )
