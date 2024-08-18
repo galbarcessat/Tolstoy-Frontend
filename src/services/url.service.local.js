@@ -8,8 +8,7 @@ export const urlService = {
 
 async function getMetadata(urls) {
     try {
-        const res = await httpService.post(`${BASE_URL}fetch-metadata`, urls)
-        console.log('res:', res)
+        const res = await httpService.post(`${BASE_URL}/fetch-metadata`, urls)
         return res
     } catch (error) {
         console.log('error:', error)
