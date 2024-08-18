@@ -9,6 +9,7 @@
     margin-top: 4rem;
     width: 450px;
     border-radius: 4px;
+    text-align: center;
 
     h1 {
         font-size: 1.5rem;
@@ -24,7 +25,7 @@
         .input-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: .5rem;
         }
 
         .btns-container {

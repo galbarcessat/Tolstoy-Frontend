@@ -1,0 +1,21 @@
+@media (max-width: 500px) {
+
+    .form-container {
+        width: 85%;
+
+        form {
+
+            .input-container {
+                // flex-direction: column;
+                // align-items: self-start;
+
+                .MuiTextField-root {
+                    // width: 100%;
+                    width:fit-content;
+                }
+            }
+        }
+    }
+
+
+}

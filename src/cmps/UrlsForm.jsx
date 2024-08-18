@@ -31,7 +31,7 @@ export function UrlsForm({ handleUrlsSubmit }) {
 
     return (
         <div className='form-container'>
-            <h1>Enter URLs to Fetch Metadata : </h1>
+            <h1>Enter URLs to Fetch Metadata</h1>
             <form onSubmit={handleSubmit}>
 
                 {urls.map((url, index) => {
