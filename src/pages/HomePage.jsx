@@ -30,6 +30,7 @@ export function HomePage() {
             {error && <p className="error-msg">{error}</p>}
             {isLoading && <Loader/>}
             {(metadata && metadata.length > 0) && <MetadataResults metadata={metadata} />}
+            <p className="developed-by-txt">Developed by Gal Ben Natan</p>
         </div>
     )
 }
