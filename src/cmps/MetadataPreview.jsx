@@ -15,8 +15,16 @@ export function MetadataPreview({ data }) {
                 <h2>Description :</h2>
                 <p>{data.description}</p>
             </div>
-            
-            {data.image && <img src={data.image} alt={data.title} />}
+
+            <div>
+                <h2>Image :</h2>
+                {data.image ?
+                    <img src={data.image} alt={data.title} />
+                    :
+                    <p>No image available</p>
+                }
+            </div>
+
         </div>
     );
 }

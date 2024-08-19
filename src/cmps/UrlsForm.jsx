@@ -23,7 +23,7 @@ export function UrlsForm({ handleUrlsSubmit }) {
     function handleSubmit(event) {
         event.preventDefault()
         if (urls.some(url => !url)) {
-            // alert('Please fill out all URL fields.')
+            alert('Please fill out all URL fields.')
         } else {
             handleUrlsSubmit(urls)
         }
